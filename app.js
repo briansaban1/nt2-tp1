@@ -3,6 +3,9 @@ const listaDeProductos = [{producto:'telefono', valor: 500}, {producto:'computad
 
 
 function filtrarProductos(valor){
+
+    document.getElementById("val").innerHTML=""
+
 const result = listaDeProductos.filter(listaDeProductos => listaDeProductos.valor <= valor)
 
 result.forEach(producto =>{
@@ -16,6 +19,8 @@ result.forEach(producto =>{
 }
 
 function filtrarProductosASC(){
+
+    document.getElementById("val").innerHTML=""
    
     const result = listaDeProductos.sort((a, b) => {
         const prodA = a.producto.toLowerCase();
@@ -34,6 +39,8 @@ function filtrarProductosASC(){
     }
 
     function filtrarPrecioDESC(){
+
+        document.getElementById("val").innerHTML=""
    
         const result = listaDeProductos.sort((a, b) => {
            return  b.valor - a.valor
